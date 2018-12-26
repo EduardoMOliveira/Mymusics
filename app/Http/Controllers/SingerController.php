@@ -3,59 +3,43 @@
 namespace mymusics\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use mymusics\Singer;
 class SingerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        return view('singer.singer');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        $singer = Singer::create($request->all());
+
+        if ($singer) {
+            $msg = [
+                'message' => "Cantor(a) {$singer->name}, cadastrado com sucesso!",
+            ];
+        } else {
+            $msg = [
+                'error' => 'Some error!',
+            ];
+        }
+        return redirect()->back()->with('success', "Cantor(a) {$singer->name}, cadastrado com sucesso!"); 
+
+    }
+    
     public function show($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
