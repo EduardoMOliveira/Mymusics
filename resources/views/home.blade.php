@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Bem Vindo ao My Music's!
                 </div>
             </div>
         </div>
