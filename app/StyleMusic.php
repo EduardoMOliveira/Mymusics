@@ -4,16 +4,17 @@ namespace mymusics;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Singer extends Model
+class StyleMusic extends Model
 {   
-    protected $table = 'singers';
     
+    protected $table = 'style_musics';
+
     protected $fillable = [
-        'name', 'nickname', 'gender', 'type', 'style_music_id'
+        'id','type'
     ];
 
     protected $sorted = [
-        'nickname', 'name', 'type', 'gender', 'style_music_id'
+        'id', 'type'
     ];
 
     protected $guarded = [

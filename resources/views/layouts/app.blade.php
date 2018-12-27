@@ -68,8 +68,8 @@
                                     <a class="dropdown-item" href="{{ route('singer') }}">
                                         {{ "Cantores" }}
                                     </a>                                    
-                                    <a class="dropdown-item" href="{{ route('group') }}">
-                                        {{ "Grupo, Banda ou Solo" }}
+                                    <a class="dropdown-item" href="{{ route('style') }}">
+                                        {{ "Estilo de Música" }}
                                     </a>                                    
                                     <a class="dropdown-item" href="{{ route('song') }}">
                                         {{ "Músicas" }}

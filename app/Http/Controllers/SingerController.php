@@ -4,12 +4,16 @@ namespace mymusics\Http\Controllers;
 
 use Illuminate\Http\Request;
 use mymusics\Singer;
+use mymusics\StyleMusic;
 class SingerController extends Controller
 {
     
     public function index()
-    {
-        return view('singer.singer');
+    {   
+        
+        $data['style_music'] = StyleMusic::pluck('type' ,'id');
+
+        return view('singer.singer', compact('data'));
     }
     
     public function store(Request $request)

@@ -13,3 +13,4 @@ Route::get('/group', 'GroupController@index')->name('group');
 Route::get('/song', 'SongController@index')->name('song');
 Route::get('/album', 'AlbumController@index')->name('album');
 Route::get('/playlist', 'PlaylistController@index')->name('playlist');
+Route::get('/style', 'StyleMusicController@index')->name('style');
