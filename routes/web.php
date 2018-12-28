@@ -9,6 +9,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/singer', 'SingerController@index')->name('singer');
 Route::post('singer', 'SingerController@store')->name('singer');
+Route::post('photos', 'SingerController@photos')->name('photos');
 Route::get('/group', 'GroupController@index')->name('group');
 Route::get('/song', 'SongController@index')->name('song');
 Route::get('/album', 'AlbumController@index')->name('album');

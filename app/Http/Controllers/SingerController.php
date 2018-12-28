@@ -25,11 +25,14 @@ class SingerController extends Controller
             $msg = [
                 'message' => "Cantor(a) {$singer->name}, cadastrado com sucesso!",
             ];
+
         } else {
+            
             $msg = [
                 'error' => 'Some error!',
             ];
         }
+
         return redirect()->back()->with('success', "Cantor(a) {$singer->name}, cadastrado com sucesso!"); 
 
     }
@@ -47,5 +50,14 @@ class SingerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function photos(Request $request) {
+
+        // header('Content-Type: image/png');
+
+        echo base64_decode($request->photo);
+
+        //dd();
     }
 }
